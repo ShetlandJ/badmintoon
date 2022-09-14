@@ -118,7 +118,6 @@ const addNewPlayer = () => {
                 >
             </div>
 
-            <!-- add new player input -->
             <div class="flex mt-4">
                 <input
                     v-model="newPlayerName"

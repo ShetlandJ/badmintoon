@@ -117,12 +117,12 @@ const resetCourts = () => {
                         rounded
                         focus:outline-none
                         disabled:opacity-25
+                        mr-2
                     "
                 >
                     Randomise
                 </button>
-            </div>
-            <div class="flex justify-center mt-4">
+
                 <button
                     @click="resetCourts"
                     class="

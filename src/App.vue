@@ -83,6 +83,18 @@ const resetCourts = () => {
         court.players = [];
     });
 };
+
+const newPlayerName = ref('');
+
+const addNewPlayer = () => {
+    players.value.push({
+        name: newPlayerName.value,
+        id: players.value.length,
+        attending: true,
+    });
+
+    newPlayerName.value = '';
+}
 </script>
 
   <template>
@@ -104,6 +116,22 @@ const resetCourts = () => {
                     :for="player.id"
                     >{{ player.name }}</label
                 >
+            </div>
+
+            <!-- add new player input -->
+            <div class="flex mt-4">
+                <input
+                    v-model="newPlayerName"
+                    class="border border-gray-400 rounded-lg p-2 mr-2"
+                    type="text"
+                    placeholder="Add new player"
+                />
+                <button
+                    @click="addNewPlayer"
+                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                >
+                    Add
+                </button>
             </div>
 
             <div class="flex justify-center mt-4">

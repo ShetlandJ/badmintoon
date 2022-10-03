@@ -18,6 +18,7 @@ const players = ref(
         "Ross Mc",
         "Callum",
         "John",
+        "Shanon",
         "Alex",
         "Gavin",
         "Chris B",
